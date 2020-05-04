@@ -5,20 +5,21 @@ import Layout from '../components/Layout'
 
 export const PageTemplate = ({ title, content }) => {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <div
-                className="content"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-            </div>
-          </div>
+    <section className="hero">
+      <div className="video">
+        <img ></img>
+        <video></video>
+      </div>
+      <div className="introText">
+      
+        <h1>WELCOME</h1>
+        <h2>TO TRIFECTA MED SPA </h2>
+        <p>Botox injections NYC. Trifecta Med Spa is a leading provider of Botox treatment in Wall Street area of NYC.
+We welcome anyone who recognizes the importance of maintaining and improving their appearance, self-image,
+life style and self-esteem.</p>
+        <div className="buttons">
+          <a><button>SERVICES</button></a>
+          <a><button>BOOK ONLINE</button></a>
         </div>
       </div>
     </section>
