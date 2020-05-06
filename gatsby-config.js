@@ -21,6 +21,16 @@ module.exports = {
         verboseOutput: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Limelight`,
+        
+        ],
+        display: 'swap'
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

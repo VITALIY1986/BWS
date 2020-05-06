@@ -5,8 +5,9 @@ import Navbar from './Navbar'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div >
     <Helmet title="Home | Gatsby + WordPress" />
+    
     <Navbar />
     <div>{children}</div>
   </div>

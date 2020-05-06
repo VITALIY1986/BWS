@@ -6,6 +6,9 @@ $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
+$font-h1: 5rem
+$font-h2: 2.5rem
+$font-p: 1.5rem
 
 .content .taglist
   list-style: none
@@ -46,14 +49,147 @@ $primary-invert: $kaldi-red-invert
 
 
 nav.navbarContainer
+ align-items: center;
  position: fixed;
  justify-content: space-between;
  display: flex;
  width: 100%;
-
- a.logo 
-  background: rebeccapurple;
-  width: 100px;
+ z-index: 100
+ padding: 15px 10px;
+a.logo 
+  
+  width: 200px;
 
 .introText
- margin-left: 50%;
+ position: absolute;
+ width: 50%;
+ right: 0;
+ top: 50%;
+ transform: translate(0px, -50%);
+ 
+
+
+
+h1
+ font-size: $font-h1 
+ font-family: 'Limelight'
+h2
+ font-size: $font-h2
+
+p
+ font-size: $font-p
+
+.heroS
+ position: relative 
+
+
+ 
+@media screen and (max-width: 1200px)
+  h1
+   
+   font-size: $font-h1
+
+
+  
+.container 
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+.custom 
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+  cursor: pointer;
+    
+    
+.dots 
+  position: relative;
+  top: -8px;
+  display: flex;
+  width: 58px;
+  justify-content: space-between;
+      
+.dot 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+      
+      
+.one 
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 250ms linear 250ms, top 250ms linear, transform 250ms linear, height 250ms linear, border-radius 250ms linear;
+      
+.two 
+  position: absolute;
+  left: 21px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transform-origin: center;
+  border: 3px solid #fff;
+  opacity: 1;      
+ 
+.three 
+  position: absolute;
+  left: 42px;
+  top: 0;
+  transition: left 250ms linear 250ms, top 250ms linear, transform 250ms linear, height 250ms linear, border-radius 250ms linear;    
+
+.custom:checked ~ .dots .one 
+  top: -32px;
+  left: 21px;
+  height: 80px;
+  transform-origin: 50% 50%;
+  transform: rotateZ(45deg);
+  border-radius: 25px;
+  transition: left 250ms linear, top 250ms linear 250ms, transform 250ms linear 250ms, height 250ms linear 250ms, opacity 100ms; 
+
+
+.custom:checked ~ .dots .two 
+  animation: two 500ms linear forwards 180ms;
+
+
+.custom:not(:checked) ~ .dots .two 
+  animation: two-back 500ms linear forwards;
+
+
+
+@keyframes two 
+  0% 
+    top: 0;
+    left: 21px;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+  
+  60% 
+    opacity: 0;
+  
+  100% 
+    top: -42px;
+    left: -21px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    opacity: 1;
+  
+.custom:checked ~ .dots .three 
+  top: -32px;
+  left: 21px;
+  height: 80px;
+  transform-origin: 50% 50%;
+  transform: rotateZ(-45deg);
+  border-radius: 25px;
+  transition: left 250ms linear, top 250ms linear 250ms, transform 250ms linear 250ms, height 250ms linear 250ms;

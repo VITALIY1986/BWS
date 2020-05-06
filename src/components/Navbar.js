@@ -18,11 +18,23 @@ const Navbar = () => (
       }
     `}
     render={data => (
-      <nav className="navbarContainer ">
-        <div className="burgetMenu">=</div>
+     
+      <nav className="navbarContainer is-desctop">
+     
+      
+        <div className="burgetMenu">
+        
+          <input type="checkbox" class="custom"></input>
+  <div class="dots">
+    <span class="dot one"></span>
+    <span class="dot two"></span>
+    <span class="dot three"></span>
+  </div></div>
         <a href="#" className="logo"><img src={Logo}></img></a>
-        <a href="/sample-page"><div>book</div></a>
+        <a href="/sample-page"><p>book</p></a>
+       
        </nav>
+      
     
     )}
   />
